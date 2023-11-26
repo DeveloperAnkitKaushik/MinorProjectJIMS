@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --redColor: hsl(0, 78%, 62%);
+  --cyanColor: hsl(180, 62%, 55%);
+  --orangeColor: hsl(34, 97%, 64%);
+  --blueColor: hsl(212, 86%, 64%);
+  --veryDarkBlue: hsl(234, 12%, 34%);
+  --grayishBlue: hsl(229, 6%, 66%);
+  --veryLightGray: hsl(0, 0%, 98%);
+  --whiteColor: hsl(0, 0%, 100%);
+}
+
+a {
+  text-decoration: none; 
+  color: inherit;
+  cursor: pointer;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  background-color: var(--veryLightGray);
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*Small*/
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1180px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    width: 1320px;
+  }
+}
+
+/*Start header Section*/
+header {
+  padding-top: 70px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+header h2 {
+  font-size: 27px;
+  color: var(--veryDarkBlue);
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+.cards {
+  margin-top: 70px;
+}
+
+.cards .card {
+  background-color: var(--whiteColor);
+  padding: 29px 25px;
+  width: 100%;
+  max-width: 352px;
+  margin: 0 auto 25px auto;
+  border-radius: 10px;
+  border-top: 2px solid transparent;
+  box-shadow: 0px 5px 10px 0px rgba(216, 226, 238, 0.75);
+}
+
+.cards .card:nth-last-of-type(1) {
+  border-color: var(--blueColor);
+}
+
+.cards .card:nth-last-of-type(2) {
+  border-color: var(--orangeColor);
+}
+
+.cards .card:nth-last-of-type(3) {
+  border-color: var(--redColor);
+}
+
+.button {
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  transition: all 0.2s;
+}
+
+.button:hover,
+.button:active {
+  background-color: initial;
+  background-position: 0 0;
+}
+
+.button:active {
+  opacity: .5;
+}
+
+.b-1{
+  background: var(--blueColor);
+  border: 1px solid var(--blueColor);
+}
+
+.b-1:hover,
+.b-1:active{
+  color: var(--blueColor);
+}
+
+.b-2{
+  background: var(--orangeColor);
+  border: 1px solid var(--orangeColor);
+}
+
+.b-2:hover,
+.b-2:active{
+  color: var(--orangeColor);
+}
+
+.b-3{
+  background: var(--redColor);
+  border: 1px solid var(--redColor);
+}
+
+.b-3:hover,
+.b-3:active{
+  color: var(--redColor);
+}
+
+.b-4{
+  background: var(--cyanColor);
+  border: 1px solid var(--cyanColor);
+}
+
+.b-4:hover,
+.b-4:active{
+  color: var(--cyanColor);
+}
+
+.cards .card:nth-last-of-type(4) {
+  border-color: var(--cyanColor);
+}
+
+.cards .card h3 {
+  color: var(--veryDarkBlue);
+}
+
+.icon{
+  display: flex;
+  align-items: center;
+}
+
+.cards .card p {
+  color: var(--grayishBlue);
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  line-height: 1.8;
+  margin: 12px 0 36px 0;
+}
+
+.cards .card img {
+  display: block;
+  margin-left: auto;
+  width: 20%;
+}
+
+@media (min-width: 768px) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 352px);
+    column-gap: 25px;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  header {
+    padding-top: 50px;
+  }
+
+  header h1 {
+    font-size: 36px;
+  }
+
+  header h2 {
+    font-size: 36px;
+    margin-top: 0;
+  }
+
+  .cards {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .cards .card {
+    margin-left: 25px;
+    margin-right: 0;
+  }
+
+  .cards .down {
+    transform: translateY(50%);
+  }
+
+  .cards .card:nth-last-of-type(2) {
+    order: 3;
+  }
+
+  .cards .card:nth-last-of-type(1) {
+    order: 2;
+  }
+}
